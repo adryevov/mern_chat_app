@@ -1,8 +1,8 @@
-GitHub Repository for Project: 
+GitHub Repository for Project: https://github.com/PJParreno/Chat-Admin-Application-MERN 
 
 Members:
 -------
-Asim Patel - 101162370
+Asim Patel - 101162370 <br />
 Patrick Parreno - 101085299
 
 How to Run Application:
