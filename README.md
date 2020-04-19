@@ -13,3 +13,7 @@ Back-end
 2. 'cd backend' 
 3. run 'npm install'
 4. run 'node server.js' ( will run on localhost:4000)
+
+Credentials to log in
+Username:  admin@gmail.com 
+Password: pwd
