@@ -116,7 +116,7 @@ export default class CreateMessage extends Component {
           </div>
           <div className="form-group">
             <Link to="/" className="nav-link">
-              <Button variant="danger">Cancel</Button>
+              <Button >Cancel</Button>
             </Link>
           </div>
         </form>

@@ -10,7 +10,8 @@ const port = process.env.PORT || 4000;
 app.use(cors());
 app.use(express.json());
 
-const uri = process.env.ATLAS_URI;
+//const uri = process.env.ATLAS_URI;
+const uri = 'mongodb+srv://chat-admin:chat-password@cluster0-ege5m.mongodb.net/test?retryWrites=true&w=majority';
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -22,7 +23,7 @@ connection.once("open", () => {
 });
 
 const eventRouter = require("./routes/events");
-const messageRouter = require("./routes/messgaes");
+const messageRouter = require("./routes/messages");
 const roomRouter = require("./routes/room");
 
 app.use("/events", eventRouter);

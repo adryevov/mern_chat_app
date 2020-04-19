@@ -79,13 +79,13 @@ export default class CreateRoom extends Component {
           <div className="form-group">
             <input
               type="submit"
-              value="Create New Message"
+              value="Create New Chat Room"
               className="btn btn-primary"
             />
           </div>
           <div className="form-group">
             <Link to="/roomLog" className="nav-link">
-              <Button variant="danger">Cancel</Button>
+              <Button >Cancel</Button>
             </Link>
           </div>
         </form>

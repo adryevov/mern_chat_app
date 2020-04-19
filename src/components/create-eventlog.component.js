@@ -61,7 +61,7 @@ export default class CreateEventlog extends Component {
         "http://localhost:4000/events/add/" ,
         event
       )
-      .then(res => console.log(res.data))
+      .then(res => console.log(res.data));
 
     window.Location = "/eventLog";
   }
@@ -115,14 +115,14 @@ export default class CreateEventlog extends Component {
           <div className="form-group">
             <input
               type="submit"
-              value="Create New Message"
+              value="Create New Event"
               className="btn btn-primary"
             />
           </div>
 
           <div className="form-group">
             <Link to="/eventLog" className="nav-link">
-              <Button variant="danger">Cancel</Button>
+              <Button >Cancel</Button>
             </Link>
           </div>
         </form>

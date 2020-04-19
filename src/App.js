@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{Component} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -17,28 +17,50 @@ import EditRoom from "./components/edit-room.component";
 import CreateMessage from "./components/create-message.component";
 import CreateEventLog from "./components/create-eventlog.component";
 import CreateRoom from "./components/create-room.component";
+import Login from "./components/login.component";
+import { bool } from "prop-types";
 
-function App() {
-  return (
-    <Router>
-      <div className="container">
-        <Navbar />
-        <br />
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.updateAuth = this.updateAuth.bind(this)
+  this.state = {
+    authenticated: bool,
+  }
+  }
+  updateAuth = (auth) => {
+    this.setState({authenticated:auth,})
+    
+  }
+  render(){
+    if(this.state.authenticated !==  true){
+      return(
+        <Login authenticated = {this.updateAuth}/>
+        
+        
+      );
+    
+    }else{
+      return (
+        <Router>
+          <div className="container">
+            <Navbar />
+            <br />
 
-        <Route path="/" exact component={MessagelogList} />
-        <Route path="/eventlog" exact component={EventlogList} />
-        <Route path="/roomLog" component={RoomList} />
+            <Route path="/" exact component={MessagelogList} />
+            <Route path="/eventlog" exact component={EventlogList} />
+            <Route path="/roomLog" component={RoomList} />
 
-        <Route path="/editMessage/:id" component={EditMessage} />
-        <Route path="/editEvent/:id" component={EditEventlog} />
-        <Route path="/editRoom/:id" component={EditRoom} />
+            <Route path="/editMessage/:id" component={EditMessage} />
+            <Route path="/editEvent/:id" component={EditEventlog} />
+            <Route path="/editRoom/:id" component={EditRoom} />
 
-        <Route path="/createMessage" component={CreateMessage} />
-        <Route path="/createEvent" component={CreateEventLog} />
-        <Route path="/createRoom" component={CreateRoom} />
-      </div>
-    </Router>
-  );
-}
+            <Route path="/createMessage" component={CreateMessage} />
+            <Route path="/createEvent" component={CreateEventLog} />
+            <Route path="/createRoom" component={CreateRoom} />
+          </div>
+        </Router>
+      );
+    }
+}}
 
-export default App;

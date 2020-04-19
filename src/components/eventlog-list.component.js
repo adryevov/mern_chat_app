@@ -14,7 +14,7 @@ const Event = props => (
     <td>
       <Link to={"/editEvent/" + props.event._id}>edit</Link> |{" "}
       <a
-        href="#"
+        href="/#"
         onClick={() => {
           props.deleteEvent(props.event._id);
         }}

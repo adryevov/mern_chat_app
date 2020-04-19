@@ -13,7 +13,7 @@ const Room = props => (
     <td>
       <Link to={"/editRoom/" + props.room._id}>edit</Link> |{" "}
       <a
-        href="#"
+        href="/#"
         onClick={() => {
           props.deleteRoom(props.room._id);
         }}

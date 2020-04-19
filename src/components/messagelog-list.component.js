@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import Button from "react-bootstrap/Button";
+import Button from 'react-bootstrap/Button';
 
 const Message = props => (
   <tr>
@@ -14,7 +14,7 @@ const Message = props => (
     <td>
       <Link to={"/editMessage/" + props.message._id}>edit</Link> |{" "}
       <a
-        href="#"
+        href="/#"
         onClick={() => {
           props.deleteMessage(props.message._id);
         }}
