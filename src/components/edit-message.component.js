@@ -96,7 +96,7 @@ export default class CreateMessage extends Component {
             />
           </div>
 
-          <div className="form-group">
+          <div class  Name="form-group">
             <label>Author: </label>
             <input
               type="text"
